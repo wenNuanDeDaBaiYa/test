@@ -1,0 +1,21 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /cmfz
+    jsp:
+      init-parameters:
+        development: true
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  datasource:
+    type: org.apache.commons.dbcp.BasicDataSource #指定连接池
+    driver-class-name: com.mysql.jdbc.Driver #连接数据库的驱动
+    url: jdbc:mysql://localhost:3306/cmfz #连接数据库的url
+    username: root
+    password: root
+mybatis:
+  type-aliases-package: com.baizhi.entity
+  mapper-locations: com/baizhi/mapper/*Mapper.xml
